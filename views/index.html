@@ -1,0 +1,97 @@
+{{extend './common/layout.html'}}
+{{block 'all'}}
+<link rel="stylesheet" href="/public/css/common.css" />
+<link rel="stylesheet" href="/public/css/index.css" />
+{{/block}}
+{{block 'content'}}
+    <div class="community-ct">
+        <div class="all-list">
+            <div class="list-title">
+                <ul class="list-h clearfix">
+                    <li class="list-item active new">
+                        <a href="#">全部</a>
+                    </li>
+                    <li class="list-item new">
+                        <a href="#">精华</a>
+                    </li>
+                    <li class="list-item new">
+                        <a href="#">分享</a>
+                    </li>
+                    <li class="list-item new">
+                        <a href="#">问答</a>
+                    </li>
+                    <li class="list-item new">
+                        <a href="#">招聘</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="#">客户端测试</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-content">
+                <ul class="list-c">
+                    {{each users}}
+                    <li class="list-item-c">
+                        <div class="avtar">
+                            <img src={{$value.avatar}} alt="">
+                        </div>
+                        <div class="re-cl">
+                            <span class="reply">10/</span>5640
+                        </div>
+                        <div class="top">置顶</div>
+                        <div class="contents">
+                            <p class="content">{{$value.bio}}</p>
+                        </div>
+                        <div class="time">15天前</div>
+                    </li>
+                    {{/each}} 
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="panel">
+                <div class="inner">
+                    <p>CNode: Node.js专业中文社区</p>
+                    <div>
+                        您可以
+                        <a href="#">登录</a>
+                        或
+                        <a href="#">注册</a>
+                        也可以
+                        <a href="#">
+                            <span class="span-info">
+                                通过 GitHub 登录
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="inner-abs">
+                    <div class="header">
+                        <span class="col-fade">友情社区</span>
+                    </div>
+                    <div class="inners">
+                        <ul class="friendship-community">
+                            <li>
+                                <a href="http://ruby-china.org">
+                                    <img src="./public/images/ruby-china-20150529.png" alt="">
+                                </a>
+                            </li>
+                            <li class="golang">
+                                <a href="http://golangtc.com/">
+                                    <img src="./public/images/golangtc-logo.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://phphub.org">
+                                    <img src="./public/images/phphub-logo.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/block}}

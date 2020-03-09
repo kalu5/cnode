@@ -1,0 +1,77 @@
+.community-hd {
+    width: 100%;
+    background-color: #444444;
+    height: 50px;
+}
+
+.community-hd-content {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.community-hd-content .community-hd-content-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100%;
+}
+
+.community-hd-content .community-hd-search {
+    position: absolute;
+    top: 12px;
+    left: 180px;
+    width: 250px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.community-hd-content .community-hd-search input {
+    width: 100%;
+    height: 28px;
+    padding: 0 0 0 15px;
+    border: 1px solid #888888;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #888888;
+}
+
+.community-hd-content .community-hd-search input:hover {
+    background-color: #fff;
+}
+
+.community-hd-content .community-hd-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100%;
+}
+
+.community-hd-content .community-hd-nav .nav-item {
+    float: right;
+    width: 82px;
+    height: 50px;
+    box-sizing: border-box;
+    line-height: 50px;
+}
+
+.community-hd-content .community-hd-nav .nav-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #CCCCCC;
+    font-size: 13px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.community-hd-content .community-hd-nav .nav-item a:hover {
+    color: #fff;
+}
+
+.community-hd-content .community-hd-nav .nav-item.new {
+    width: 65px;
+}

@@ -1,0 +1,84 @@
+{{extend './common/layout.html'}}
+{{block 'all'}}
+<link rel="stylesheet" href="/public/css/common.css" />
+<link rel="stylesheet" href="/public/css/login.css" />
+{{/block}}
+{{block 'content'}}
+    <div class="login">
+        <div class="login-ct">
+            <div class="login-hd">
+                <p><a href="/" class="go-home"> 主页/ </a><span class="lg">注册</span></p>
+            </div>
+            <div class="inner">
+                <form class="login-fm" id="Login_Form">
+                    <div class="username">
+                        <label for="username">
+                            Email 
+                        </label> 
+                        <div class="control">
+                            <input type="text" id="username" name="emile" />
+                        </div>
+                    </div>
+                    <div class="password">
+                        <label for="nicname">
+                            昵称 
+                        </label>
+                        <div class="control">
+                            <input type="text" id="nicname" name="username" />
+                        </div>
+                    </div>
+                    <div class="password">
+                        <label for="password">
+                            密码 
+                        </label>
+                        <div class="control">
+                            <input type="password" id="password" name="password" />
+                        </div>
+                    </div>
+                    <div class="login-btns">
+                        <button class="btn" >注册</button>
+                        <a href="/login" class="by-gh">去登录</a>
+                        <a href="#" class="forget-pss">欢迎注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{{/block}}
+{{block 'scripts'}}
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        console.log(1);
+        ;(function () {
+            console.log ($);
+            console.log ( $ ("#Login_Form"));
+            $ ('#Login_Form').on ('submit', function (e) {
+
+                e.preventDefault ();
+                console.log (2222);
+                let formData = $ (this).serialize ();
+
+                $.ajax ({
+                    url: '/register',
+                    type: 'post',
+                    dataType: 'json',
+                    data: formData,
+                    success: function (data) {
+                        console.log (data);
+                        let errCode = data.err_code;
+
+                        if (errCode === 0) {
+                            window.alert ('注册成功！');
+                        } else {
+                            window.alert ('用户名或密码已存在')
+                        }
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            })
+
+        })();
+    </script>
+{{/block}}

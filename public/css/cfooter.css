@@ -1,0 +1,14 @@
+.community-ft {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+}
+
+.ft-content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.ft-content p {
+    color: #ABABAB;
+}

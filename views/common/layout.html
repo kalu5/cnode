@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/common.css" />
+    <link rel="stylesheet" href="/public/css/cheader.css" />
+    <link rel="stylesheet" href="/public/css/common.css" />
+    <link rel="stylesheet" href="/public/css/cfooter.css" />
+    {{block 'all'}}
+    {{/block}}
+    <title>CNode: Node.js专业中文社区</title>
+</head>
+<body>
+    {{include './cheader.html'}}
+    {{block 'content'}}
+       <h1>这是默认的list</h1>
+    {{/block}}
+    {{include './cfooter.html'}}
+    {{block 'scripts'}}
+    {{/block}}
+</body>
+</html>

@@ -1,0 +1,38 @@
+{{extend './common/layout.html'}}
+{{block 'all'}}
+<link rel="stylesheet" href="/public/css/common.css" />
+<link rel="stylesheet" href="/public/css/login.css" />
+{{/block}}
+{{block 'content'}}
+    <div class="login">
+        <div class="login-ct">
+            <div class="login-hd">
+                <p><a href="/" class="go-home"> 主页/ </a><span class="lg">话题</span></p>
+            </div>
+            <div class="inner">
+                <form class="login-fm" action="/send" method="post">
+                    <input type="hidden" name="id" />
+                    <div class="username">
+                        <label for="username">
+                            昵称 
+                        </label> 
+                        <div class="control">
+                            <input type="text" id="username" name="username" />
+                        </div>
+                    </div>
+                    <div class="send-content">
+                        <label for="content">
+                            我想说： 
+                        </label> 
+                        <div class="control">
+                            <textarea name="content" id="content" cols="100" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="login-btns">
+                        <button class="btn" type="submit">发表</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{{/block}}

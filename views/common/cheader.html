@@ -1,0 +1,46 @@
+<header class="community-hd">
+    <div class="community-hd-content">
+        <div class="community-hd-content-title">
+            <img src="/public/images/title.png" alt="" />
+        </div>
+        <div class="community-hd-search">
+            <input type="text  /">
+        </div>
+        <nav class="community-hd-nav">
+            <ul class="nav-list clearfix">
+                {{if user}}
+                <li class="nav-item new">
+                    <a href="/login" class="nav-link">{{user.username}}</a>
+                </li>
+                <li class="nav-item new">
+                    <a href="/register" class="nav-link">退出</a>
+                </li>
+                <li class="nav-item new">
+                    <a href="/send" class="nav-link">发起</a>
+                </li>
+                {{else}}
+                <li class="nav-item new">
+                    <a href="/login" class="nav-link">登录</a>
+                </li>
+                <li class="nav-item new">
+                    <a href="/register" class="nav-link">注册</a>
+                </li>
+                <li class="nav-item new">
+                    <a href="#" class="nav-link">关于</a>
+                </li>
+                {{/if}}
+                <li class="nav-item new">
+                    <a href="#" class="nav-link">API</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">新手入门</a>
+                </li>
+                <li class="nav-item new">
+                    <a href="/" class="nav-link">首页</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+   
